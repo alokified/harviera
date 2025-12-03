@@ -1,0 +1,42 @@
+"use client"
+import { motion } from 'framer-motion'
+import Link from 'next/link'
+import Button from '@/components/ui/button'
+import { Building2 } from 'lucide-react'
+
+export default function IndustriesCtaStrip() {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="relative"
+    >
+      <div className="glass-card p-8 md:p-12 bg-gradient-to-br from-mint/50 via-sky/40 to-lavender/40 text-center shadow-xl transition-all ease-soft hover:scale-[1.01]">
+        <div className="max-w-2xl mx-auto space-y-5">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white/60 mb-2">
+            <Building2 className="h-8 w-8 text-gray-800" />
+          </div>
+          
+          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">
+            Wondering how Harviera can help in your industry?
+          </h2>
+          
+          <p className="text-gray-700 text-lg">
+            Share your context—education, SaaS, enterprise or startup—and we'll map the right IT, AI, digital and education services.
+          </p>
+
+          <div className="flex flex-wrap gap-3 justify-center pt-2">
+            <Link href="/contact">
+              <Button variant="primary">Book an industry consultation</Button>
+            </Link>
+            <Link href="/case-studies">
+              <Button variant="ghost">Explore case studies</Button>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  )
+}
