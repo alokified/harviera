@@ -1,5 +1,5 @@
 "use client"
-import { motion } from 'framer-motion'
+import { MotionDiv } from '@/components/common/motion-div'
 import { MessageCircle, Calendar, Mail, Award } from 'lucide-react'
 
 export default function ContactHero() {
@@ -28,11 +28,11 @@ export default function ContactHero() {
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center relative">
       {/* Left: Text Content */}
-      <motion.div
+      <MotionDiv
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
-        className="space-y-6"
+        className="space-y-6" as any
       >
         <div className="inline-block">
           <div className="glass-card px-4 py-2 text-sm bg-lavender/40">
@@ -64,18 +64,18 @@ export default function ContactHero() {
         <p className="text-sm text-gray-600 italic">
           We typically respond within 1–2 business days.
         </p>
-      </motion.div>
+      </MotionDiv>
 
       {/* Right: Collaboration Illustration */}
-      <motion.div
+      <MotionDiv
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
-        className="relative"
+        className="relative" as any
       >
         <div className="glass-card p-8 bg-gradient-to-br from-lavender/20 via-sky/15 to-mint/20 relative">
           {/* Main Contact Card */}
-          <motion.div
+          <MotionDiv
             animate={{ y: [0, -6, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
             className="glass-card p-6 bg-white/60 mb-6"
@@ -94,7 +94,7 @@ export default function ContactHero() {
                 We'd love to help! Let's discuss.
               </div>
             </div>
-          </motion.div>
+          </MotionDiv>
 
           {/* Floating Action Chips */}
           <div className="grid grid-cols-2 gap-3">
@@ -106,7 +106,7 @@ export default function ContactHero() {
             ].map((chip, i) => {
               const Icon = chip.icon
               return (
-                <motion.div
+                <MotionDiv
                   key={chip.label}
                   animate={{ y: [0, -4, 0] }}
                   transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: i * 0.3 }}
@@ -114,12 +114,12 @@ export default function ContactHero() {
                 >
                   <Icon className="h-4 w-4 text-gray-700 flex-shrink-0" />
                   <span className="text-xs font-medium">{chip.label}</span>
-                </motion.div>
+                </MotionDiv>
               )
             })}
           </div>
         </div>
-      </motion.div>
+      </MotionDiv>
       </div>
     </div>
   )

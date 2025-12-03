@@ -1,5 +1,6 @@
 "use client"
 import { motion } from 'framer-motion'
+import { MotionDiv } from '@/components/common/motion-div'
 import { GraduationCap, Laptop, BarChart3, Brain, TrendingUp, Users, Cloud, Lock, MessageCircle } from 'lucide-react'
 import Button from '@/components/ui/button'
 import { LucideIcon } from 'lucide-react'
@@ -141,7 +142,7 @@ export default function CoursesGrid() {
 
   return (
     <div id="courses-grid" className="space-y-8">
-      <motion.div
+      <MotionDiv
         className="grid gap-6 md:grid-cols-2 xl:grid-cols-3"
         initial="hidden"
         whileInView="show"
@@ -154,7 +155,7 @@ export default function CoursesGrid() {
         {courses.map((course) => {
           const Icon = course.icon
           return (
-            <motion.div
+            <MotionDiv
               key={course.id}
               variants={{
                 hidden: { opacity: 0, y: 30 },
@@ -204,10 +205,11 @@ export default function CoursesGrid() {
                   </a>
                 </div>
               </div>
-            </motion.div>
+            </MotionDiv>
           )
         })}
-      </motion.div>
+      </MotionDiv>
     </div>
   )
 }
+

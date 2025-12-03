@@ -1,5 +1,6 @@
 "use client"
 import { motion } from 'framer-motion'
+import { MotionDiv } from '@/components/common/motion-div'
 import { Search } from 'lucide-react'
 import { useState } from 'react'
 
@@ -9,7 +10,7 @@ export default function CaseStudiesFilters() {
   const [search, setSearch] = useState('')
 
   return (
-    <motion.div
+    <MotionDiv
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -77,6 +78,6 @@ export default function CaseStudiesFilters() {
           Showing <span className="font-medium">6 case studies</span>
         </div>
       </div>
-    </motion.div>
+    </MotionDiv>
   )
 }

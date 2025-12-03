@@ -1,5 +1,5 @@
 "use client"
-import { motion } from 'framer-motion'
+import { MotionDiv } from '@/components/common/motion-div'
 import Link from 'next/link'
 import Button from '@/components/ui/button'
 import { BookOpen, FileText, Video, Cloud, Brain, GraduationCap, TrendingUp, Users } from 'lucide-react'
@@ -16,11 +16,11 @@ export default function ResourcesHero() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
       {/* Left: Text Content */}
-      <motion.div
+      <MotionDiv
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
-        className="space-y-6"
+        className="space-y-6" as any
       >
         <div className="inline-block">
           <div className="glass-card px-4 py-2 text-sm bg-sky/40">
@@ -53,18 +53,18 @@ export default function ResourcesHero() {
             <Button variant="ghost">Get in touch</Button>
           </Link>
         </div>
-      </motion.div>
+      </MotionDiv>
 
       {/* Right: Content Dashboard Illustration */}
-      <motion.div
+      <MotionDiv
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
-        className="relative"
+        className="relative" as any
       >
         <div className="glass-card p-8 bg-gradient-to-br from-sky/20 via-lavender/15 to-mint/20 relative">
           {/* Main Content Card */}
-          <motion.div
+          <MotionDiv
             animate={{ y: [0, -6, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
             className="glass-card p-6 bg-white/60 mb-6"
@@ -84,14 +84,14 @@ export default function ResourcesHero() {
               ))}
               <div className="h-2 bg-gray-200/50 rounded-full w-2/3" />
             </div>
-          </motion.div>
+          </MotionDiv>
 
           {/* Floating Topic Chips */}
           <div className="grid grid-cols-2 gap-2">
             {topics.map((topic, i) => {
               const Icon = topic.icon
               return (
-                <motion.div
+                <MotionDiv
                   key={topic.label}
                   animate={{ y: [0, -4, 0] }}
                   transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: i * 0.3 }}
@@ -99,12 +99,12 @@ export default function ResourcesHero() {
                 >
                   <Icon className="h-4 w-4 text-gray-700 flex-shrink-0" />
                   <span className="text-xs font-medium">{topic.label}</span>
-                </motion.div>
+                </MotionDiv>
               )
             })}
           </div>
         </div>
-      </motion.div>
+      </MotionDiv>
     </div>
   )
 }

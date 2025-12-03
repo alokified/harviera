@@ -1,8 +1,8 @@
 "use client"
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Button from '@/components/ui/button'
 import { Globe, Users, Award } from 'lucide-react'
+import { MotionDiv } from '@/components/common/motion-div'
 
 export default function AboutHero() {
   return (
@@ -22,7 +22,7 @@ export default function AboutHero() {
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center relative">
       {/* Left: Text Content */}
-      <motion.div
+      <MotionDiv
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -61,10 +61,10 @@ export default function AboutHero() {
             <Button variant="primary">Explore Our Services</Button>
           </Link>
         </div>
-      </motion.div>
+      </MotionDiv>
 
-      {/* Right: Illustration */}
-      <motion.div
+      {/* Right: Team Image */}
+      <MotionDiv
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
@@ -72,18 +72,18 @@ export default function AboutHero() {
       >
         <div className="glass-card p-8 bg-gradient-to-br from-lavender/30 via-mint/20 to-sky/30 relative overflow-hidden">
           {/* Central Globe/Network */}
-          <motion.div
+          <MotionDiv
             animate={{ y: [0, -6, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
             className="glass-card p-6 bg-white/50 mx-auto w-32 h-32 rounded-full flex items-center justify-center mb-6"
           >
             <Globe className="h-16 w-16 text-gray-900" />
-          </motion.div>
+          </MotionDiv>
 
           {/* Floating Leadership Avatars */}
           <div className="grid grid-cols-3 gap-3 mb-6">
             {[1, 2, 3].map((i) => (
-              <motion.div
+              <MotionDiv
                 key={i}
                 animate={{ y: [0, -4, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: i * 0.3 }}
@@ -93,14 +93,14 @@ export default function AboutHero() {
                   <Users className="h-6 w-6 text-gray-700" />
                 </div>
                 <div className="text-xs text-center text-gray-700">Leader {i}</div>
-              </motion.div>
+              </MotionDiv>
             ))}
           </div>
 
           {/* Floating Value Badges */}
           <div className="flex flex-wrap gap-2 justify-center">
             {['Innovation', 'Integrity', 'Excellence'].map((value, i) => (
-              <motion.div
+              <MotionDiv
                 key={value}
                 animate={{ y: [0, -3, 0] }}
                 transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: i * 0.4 }}
@@ -108,11 +108,11 @@ export default function AboutHero() {
               >
                 <Award className="h-3 w-3" />
                 {value}
-              </motion.div>
+              </MotionDiv>
             ))}
           </div>
         </div>
-      </motion.div>
+      </MotionDiv>
       </div>
     </div>
   )

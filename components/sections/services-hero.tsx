@@ -1,5 +1,5 @@
 "use client"
-import { motion } from 'framer-motion'
+import { MotionDiv } from '@/components/common/motion-div'
 import Link from 'next/link'
 import Button from '@/components/ui/button'
 import { Code2, Brain, TrendingUp, GraduationCap, Users } from 'lucide-react'
@@ -30,11 +30,11 @@ export default function ServicesHero() {
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center relative">
       {/* Left: Text Content */}
-      <motion.div
+      <MotionDiv
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
-        className="space-y-6"
+        className="space-y-6" as any
       >
         <div className="inline-block">
           <div className="glass-card px-4 py-2 text-sm bg-mint/40">
@@ -71,21 +71,21 @@ export default function ServicesHero() {
             <Button variant="ghost">Download Services Deck</Button>
           </a>
         </div>
-      </motion.div>
+      </MotionDiv>
 
       {/* Right: Service Tiles Illustration */}
-      <motion.div
+      <MotionDiv
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
-        className="relative"
+        className="relative" as any
       >
         <div className="glass-card p-8 bg-gradient-to-br from-lavender/20 via-mint/15 to-baby-blue/20">
           <div className="grid grid-cols-2 gap-4">
             {serviceTiles.map((tile, i) => {
               const Icon = tile.icon
               return (
-                <motion.div
+                <MotionDiv
                   key={tile.label}
                   animate={{ y: [0, -6, 0] }}
                   transition={{ 
@@ -98,12 +98,12 @@ export default function ServicesHero() {
                 >
                   <Icon className="h-8 w-8 text-gray-800" />
                   <span className="text-sm font-medium">{tile.label}</span>
-                </motion.div>
+                </MotionDiv>
               )
             })}
           </div>
         </div>
-      </motion.div>
+      </MotionDiv>
       </div>
     </div>
   )

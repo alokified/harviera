@@ -1,5 +1,6 @@
 "use client"
 import { motion } from 'framer-motion'
+import { MotionDiv } from '@/components/common/motion-div'
 import CaseStudyCard from './case-study-card'
 
 type CaseStudy = {
@@ -110,7 +111,7 @@ export default function CaseStudiesList() {
 
   return (
     <div id="case-studies-list" className="space-y-8">
-      <motion.div
+      <MotionDiv
         className="grid gap-6 md:grid-cols-2"
         initial="hidden"
         whileInView="show"
@@ -121,7 +122,7 @@ export default function CaseStudiesList() {
         }}
       >
         {caseStudies.map((caseStudy) => (
-          <motion.div
+          <MotionDiv
             key={caseStudy.id}
             variants={{
               hidden: { opacity: 0, y: 30 },
@@ -129,9 +130,10 @@ export default function CaseStudiesList() {
             }}
           >
             <CaseStudyCard {...caseStudy} />
-          </motion.div>
+          </MotionDiv>
         ))}
-      </motion.div>
+      </MotionDiv>
     </div>
   )
 }
+

@@ -1,5 +1,5 @@
 "use client"
-import { motion } from 'framer-motion'
+import { MotionDiv } from '@/components/common/motion-div'
 import Link from 'next/link'
 import Button from '@/components/ui/button'
 import { TrendingUp, Clock, Users } from 'lucide-react'
@@ -22,11 +22,11 @@ export default function CaseStudiesHero() {
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center relative">
       {/* Left: Text Content */}
-      <motion.div
+      <MotionDiv
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
-        className="space-y-6"
+        className="space-y-6" as any
       >
         <div className="inline-block">
           <div className="glass-card px-4 py-2 text-sm bg-mint/40">
@@ -59,18 +59,18 @@ export default function CaseStudiesHero() {
             <Button variant="ghost">Talk to us about a similar project</Button>
           </Link>
         </div>
-      </motion.div>
+      </MotionDiv>
 
       {/* Right: Analytics Dashboard Illustration */}
-      <motion.div
+      <MotionDiv
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
-        className="relative"
+        className="relative" as any
       >
         <div className="glass-card p-8 bg-gradient-to-br from-lavender/20 via-sky/15 to-mint/20">
           {/* Main Metric Card */}
-          <motion.div
+          <MotionDiv
             animate={{ y: [0, -6, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
             className="glass-card p-6 bg-white/60 mb-6 text-center"
@@ -88,7 +88,7 @@ export default function CaseStudiesHero() {
                 />
               ))}
             </div>
-          </motion.div>
+          </MotionDiv>
 
           {/* Floating Metric Cards */}
           <div className="grid grid-cols-2 gap-3">
@@ -99,7 +99,7 @@ export default function CaseStudiesHero() {
             ].map((metric, i) => {
               const Icon = metric.icon
               return (
-                <motion.div
+                <MotionDiv
                   key={metric.label}
                   animate={{ y: [0, -4, 0] }}
                   transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: i * 0.4 }}
@@ -107,12 +107,12 @@ export default function CaseStudiesHero() {
                 >
                   <Icon className="h-4 w-4 text-gray-700 flex-shrink-0" />
                   <span className="text-xs font-medium">{metric.label}</span>
-                </motion.div>
+                </MotionDiv>
               )
             })}
           </div>
         </div>
-      </motion.div>
+      </MotionDiv>
       </div>
     </div>
   )

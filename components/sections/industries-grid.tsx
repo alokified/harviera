@@ -1,5 +1,6 @@
 "use client"
 import { motion } from 'framer-motion'
+import { MotionDiv } from '@/components/common/motion-div'
 import { GraduationCap, Code2, Award, Rocket, Building2, Activity } from 'lucide-react'
 import IndustryCard from './industry-card'
 
@@ -97,7 +98,7 @@ export default function IndustriesGrid() {
       </div>
 
       {/* Industries Grid */}
-      <motion.div
+      <MotionDiv
         className="grid gap-6 md:grid-cols-2 xl:grid-cols-3"
         initial="hidden"
         whileInView="show"
@@ -108,7 +109,7 @@ export default function IndustriesGrid() {
         }}
       >
         {industries.map((industry) => (
-          <motion.div
+          <MotionDiv
             key={industry.id}
             variants={{
               hidden: { opacity: 0, y: 30 },
@@ -116,9 +117,9 @@ export default function IndustriesGrid() {
             }}
           >
             <IndustryCard {...industry} />
-          </motion.div>
+          </MotionDiv>
         ))}
-      </motion.div>
+      </MotionDiv>
     </div>
   )
 }

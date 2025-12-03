@@ -1,5 +1,5 @@
 "use client"
-import { motion } from 'framer-motion'
+import { MotionDiv } from '@/components/common/motion-div'
 import Link from 'next/link'
 import Button from '@/components/ui/button'
 import { GraduationCap, Code2, Award, Rocket, Building2, Activity } from 'lucide-react'
@@ -17,11 +17,11 @@ export default function IndustriesHero() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
       {/* Left: Text Content */}
-      <motion.div
+      <MotionDiv
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
-        className="space-y-6"
+        className="space-y-6" as any
       >
         <div className="inline-block">
           <div className="glass-card px-4 py-2 text-sm bg-mint/40">
@@ -54,14 +54,14 @@ export default function IndustriesHero() {
             <Button variant="ghost">View case studies</Button>
           </Link>
         </div>
-      </motion.div>
+      </MotionDiv>
 
       {/* Right: Floating Industry Badges Illustration */}
-      <motion.div
+      <MotionDiv
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
-        className="relative"
+        className="relative" as any
       >
         <div className="glass-card p-8 bg-gradient-to-br from-mint/20 via-lavender/15 to-sky/20 relative min-h-[400px] flex items-center justify-center">
           {/* Central node/globe representation */}
@@ -74,7 +74,7 @@ export default function IndustriesHero() {
             {sectors.map((sector, i) => {
               const Icon = sector.icon
               return (
-                <motion.div
+                <MotionDiv
                   key={sector.label}
                   animate={{ y: [0, -8, 0] }}
                   transition={{ 
@@ -91,12 +91,12 @@ export default function IndustriesHero() {
                 >
                   <Icon className="h-6 w-6 text-gray-800" />
                   <span className="text-sm font-medium text-center">{sector.label}</span>
-                </motion.div>
+                </MotionDiv>
               )
             })}
           </div>
         </div>
-      </motion.div>
+      </MotionDiv>
     </div>
   )
 }

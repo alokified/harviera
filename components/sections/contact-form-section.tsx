@@ -1,5 +1,6 @@
 "use client"
 import { motion } from 'framer-motion'
+import { MotionDiv } from '@/components/common/motion-div'
 import { useState } from 'react'
 import Button from '@/components/ui/button'
 import { Mail, Phone, Clock, MapPin, Send } from 'lucide-react'
@@ -73,7 +74,7 @@ export default function ContactFormSection() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-[minmax(0,2fr)_minmax(0,1.4fr)] gap-8">
       {/* Left: Contact Form */}
-      <motion.div
+      <MotionDiv
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -221,10 +222,10 @@ export default function ContactFormSection() {
             </Button>
           </form>
         </div>
-      </motion.div>
+      </MotionDiv>
 
       {/* Right: Contact Info */}
-      <motion.div
+      <MotionDiv
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -304,7 +305,7 @@ export default function ContactFormSection() {
             </a>
           </div>
         </div>
-      </motion.div>
+      </MotionDiv>
     </div>
   )
 }

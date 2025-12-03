@@ -1,5 +1,6 @@
 "use client"
 import { motion } from 'framer-motion'
+import { MotionDiv } from '@/components/common/motion-div'
 import Link from 'next/link'
 import Button from '@/components/ui/button'
 import { Bell } from 'lucide-react'
@@ -16,7 +17,7 @@ export default function ResourcesCtaStrip() {
   }
 
   return (
-    <motion.div
+    <MotionDiv
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -61,6 +62,6 @@ export default function ResourcesCtaStrip() {
           </div>
         </div>
       </div>
-    </motion.div>
+    </MotionDiv>
   )
 }

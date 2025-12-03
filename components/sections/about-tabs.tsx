@@ -1,5 +1,6 @@
 "use client"
 import { motion } from 'framer-motion'
+import { MotionDiv } from '@/components/common/motion-div'
 import Tabs from '@/components/ui/tabs'
 import LeadershipCard from './about-leadership-card'
 import { Award } from 'lucide-react'
@@ -84,7 +85,7 @@ export default function AboutTabs() {
         {
           label: 'Leadership Team',
           content: (
-            <motion.div
+            <MotionDiv
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
               initial="hidden"
               animate="show"
@@ -94,7 +95,7 @@ export default function AboutTabs() {
               }}
             >
               {leaders.map((leader) => (
-                <motion.div
+                <MotionDiv
                   key={leader.name}
                   variants={{
                     hidden: { opacity: 0, y: 20 },
@@ -102,9 +103,9 @@ export default function AboutTabs() {
                   }}
                 >
                   <LeadershipCard {...leader} />
-                </motion.div>
+                </MotionDiv>
               ))}
-            </motion.div>
+            </MotionDiv>
           ),
         },
         {
@@ -112,7 +113,7 @@ export default function AboutTabs() {
           content: (
             <div className="glass-card p-8 bg-peach/20">
               <h3 className="text-xl font-medium mb-6 text-center">What Drives Us</h3>
-              <motion.div
+              <MotionDiv
                 className="grid grid-cols-2 md:grid-cols-3 gap-4"
                 initial="hidden"
                 animate="show"
@@ -122,7 +123,7 @@ export default function AboutTabs() {
                 }}
               >
                 {values.map((value) => (
-                  <motion.div
+                  <MotionDiv
                     key={value}
                     variants={{
                       hidden: { opacity: 0, scale: 0.9 },
@@ -132,9 +133,9 @@ export default function AboutTabs() {
                   >
                     <Award className="h-4 w-4 text-gray-700" />
                     <span className="font-medium">{value}</span>
-                  </motion.div>
+                  </MotionDiv>
                 ))}
-              </motion.div>
+              </MotionDiv>
             </div>
           ),
         },

@@ -1,5 +1,6 @@
 "use client"
 import { motion } from 'framer-motion'
+import { MotionDiv } from '@/components/common/motion-div'
 import { Code2, Lightbulb, TrendingUp, GraduationCap } from 'lucide-react'
 import Link from 'next/link'
 
@@ -47,7 +48,7 @@ export default function HomeHighlights() {
       </div>
 
       {/* Highlights Grid */}
-      <motion.div
+      <MotionDiv
         className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6"
         initial="hidden"
         whileInView="show"
@@ -58,7 +59,7 @@ export default function HomeHighlights() {
         }}
       >
         {highlights.map(({ icon: Icon, title, description, color }) => (
-          <motion.div
+          <MotionDiv
             key={title}
             variants={{
               hidden: { opacity: 0, y: 20 },
@@ -74,9 +75,10 @@ export default function HomeHighlights() {
             <Link href="/services" className="text-sm text-gray-900 hover:underline">
               Learn more →
             </Link>
-          </motion.div>
+          </MotionDiv>
         ))}
-      </motion.div>
+      </MotionDiv>
     </div>
   )
 }
+

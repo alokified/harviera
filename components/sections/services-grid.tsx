@@ -1,5 +1,6 @@
 "use client"
 import { motion } from 'framer-motion'
+import { MotionDiv } from '@/components/common/motion-div'
 import { Code2, Brain, TrendingUp, GraduationCap, Users } from 'lucide-react'
 import ServiceCategoryCard from './service-category-card'
 
@@ -71,7 +72,7 @@ export default function ServicesGrid() {
       </div>
 
       {/* Service Categories Grid */}
-      <motion.div
+      <MotionDiv
         className="grid gap-6 md:grid-cols-2 xl:grid-cols-3"
         initial="hidden"
         whileInView="show"
@@ -82,7 +83,7 @@ export default function ServicesGrid() {
         }}
       >
         {categories.map((category) => (
-          <motion.div
+          <MotionDiv
             key={category.title}
             variants={{
               hidden: { opacity: 0, y: 30 },
@@ -90,9 +91,10 @@ export default function ServicesGrid() {
             }}
           >
             <ServiceCategoryCard {...category} />
-          </motion.div>
+          </MotionDiv>
         ))}
-      </motion.div>
+      </MotionDiv>
     </div>
   )
 }
+

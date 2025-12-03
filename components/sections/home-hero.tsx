@@ -1,5 +1,5 @@
 "use client"
-import { motion } from 'framer-motion'
+import { MotionDiv } from '@/components/common/motion-div'
 import Link from 'next/link'
 import Button from '@/components/ui/button'
 
@@ -19,11 +19,11 @@ export default function HomeHero() {
         />
       </div>
 
-      <motion.div
+      <MotionDiv
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-        className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center relative"
+        className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center relative" as any
       >
       {/* Left: Text Content */}
       <div className="space-y-6">
@@ -70,7 +70,7 @@ export default function HomeHero() {
 
       {/* Right: Visual Illustration */}
       <div className="relative">
-        <motion.div
+        <MotionDiv
           className="glass-card p-8 bg-gradient-to-br from-baby-blue/30 to-lavender/30"
           animate={{ y: [0, -6, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
@@ -97,7 +97,7 @@ export default function HomeHero() {
               </div>
             </div>
 
-            <motion.div
+            <MotionDiv
               className="glass-card p-4 bg-peach/40"
               animate={{ y: [0, -4, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
@@ -117,20 +117,21 @@ export default function HomeHero() {
                   <span>API Integrations</span>
                 </div>
               </div>
-            </motion.div>
+            </MotionDiv>
 
-            <motion.div
+            <MotionDiv
               className="glass-card p-3 bg-mint/40 inline-block"
               animate={{ y: [0, -3, 0] }}
               transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
             >
               <div className="text-sm font-medium">🎓 Job-ready courses</div>
               <div className="text-xs text-gray-600 mt-1">500+ learners trained</div>
-            </motion.div>
+            </MotionDiv>
           </div>
-        </motion.div>
+        </MotionDiv>
       </div>
-    </motion.div>
+    </MotionDiv>
     </div>
   )
 }
+

@@ -1,5 +1,6 @@
 "use client"
 import { motion } from 'framer-motion'
+import { MotionDiv } from '@/components/common/motion-div'
 import Tabs from '@/components/ui/tabs'
 import ResourceCard from './resource-card'
 
@@ -198,7 +199,7 @@ export default function ResourcesTabs() {
           {
             label: 'Blogs',
             content: (
-              <motion.div
+              <MotionDiv
                 className="grid gap-6 md:grid-cols-2 xl:grid-cols-3"
                 initial="hidden"
                 animate="show"
@@ -208,7 +209,7 @@ export default function ResourcesTabs() {
                 }}
               >
                 {blogs.map((resource) => (
-                  <motion.div
+                  <MotionDiv
                     key={resource.id}
                     variants={{
                       hidden: { opacity: 0, y: 20 },
@@ -216,15 +217,15 @@ export default function ResourcesTabs() {
                     }}
                   >
                     <ResourceCard {...resource} />
-                  </motion.div>
+                  </MotionDiv>
                 ))}
-              </motion.div>
+              </MotionDiv>
             ),
           },
           {
             label: 'Guides',
             content: (
-              <motion.div
+              <MotionDiv
                 className="grid gap-6 md:grid-cols-2 xl:grid-cols-3"
                 initial="hidden"
                 animate="show"
@@ -234,7 +235,7 @@ export default function ResourcesTabs() {
                 }}
               >
                 {guides.map((resource) => (
-                  <motion.div
+                  <MotionDiv
                     key={resource.id}
                     variants={{
                       hidden: { opacity: 0, y: 20 },
@@ -242,15 +243,15 @@ export default function ResourcesTabs() {
                     }}
                   >
                     <ResourceCard {...resource} />
-                  </motion.div>
+                  </MotionDiv>
                 ))}
-              </motion.div>
+              </MotionDiv>
             ),
           },
           {
             label: 'Webinars',
             content: (
-              <motion.div
+              <MotionDiv
                 className="grid gap-6 md:grid-cols-2 xl:grid-cols-3"
                 initial="hidden"
                 animate="show"
@@ -260,7 +261,7 @@ export default function ResourcesTabs() {
                 }}
               >
                 {webinars.map((resource) => (
-                  <motion.div
+                  <MotionDiv
                     key={resource.id}
                     variants={{
                       hidden: { opacity: 0, y: 20 },
@@ -268,9 +269,9 @@ export default function ResourcesTabs() {
                     }}
                   >
                     <ResourceCard {...resource} />
-                  </motion.div>
+                  </MotionDiv>
                 ))}
-              </motion.div>
+              </MotionDiv>
             ),
           },
         ]}
