@@ -7,10 +7,30 @@ import { Award } from 'lucide-react'
 
 export default function AboutTabs() {
   const leaders = [
-    { name: 'Rajesh Kumar', role: 'CEO & Founder', expertise: 'Visionary leader with 15+ years in IT strategy and digital transformation.' },
-    { name: 'Priya Sharma', role: 'CTO', expertise: 'Expert in cloud architecture, AI/ML systems, and scalable infrastructure.' },
-    { name: 'Amit Patel', role: 'Head of Education', expertise: 'Pioneering educational consultant specializing in overseas admissions and EdTech.' },
-    { name: 'Neha Verma', role: 'Director of Marketing', expertise: 'Digital marketing strategist driving growth through SEO, social, and analytics.' },
+    { 
+      name: 'Rajesh Kumar', 
+      role: 'CEO & Founder', 
+      expertise: 'Visionary leader with 15+ years in IT strategy and digital transformation.',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80'
+    },
+    { 
+      name: 'Priya Sharma', 
+      role: 'CTO', 
+      expertise: 'Expert in cloud architecture, AI/ML systems, and scalable infrastructure.',
+      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80'
+    },
+    { 
+      name: 'Amit Patel', 
+      role: 'Head of Education', 
+      expertise: 'Pioneering educational consultant specializing in overseas admissions and EdTech.',
+      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80'
+    },
+    { 
+      name: 'Neha Verma', 
+      role: 'Director of Marketing', 
+      expertise: 'Digital marketing strategist driving growth through SEO, social, and analytics.',
+      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80'
+    },
   ]
 
   const values = [

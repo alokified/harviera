@@ -233,7 +233,7 @@ export default function ContactFormSection() {
         className="space-y-6"
       >
         {/* Reach Us Directly */}
-        <div className="glass-card p-6">
+        <div className="glass-card-vibrant p-6 border border-accent/30">
           <h3 className="text-lg font-semibold mb-4">Reach us directly</h3>
           <div className="space-y-3">
             <div className="flex items-start gap-3">
@@ -265,7 +265,13 @@ export default function ContactFormSection() {
         </div>
 
         {/* Our Presence */}
-        <div className="glass-card p-6">
+        <div className="glass-card-vibrant overflow-hidden border border-accent/30">
+          <img 
+            src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=600&q=80" 
+            alt="Global presence"
+            className="w-full h-48 object-cover"
+          />
+          <div className="p-6">
           <h3 className="text-lg font-semibold mb-4">Our presence</h3>
           <div className="space-y-4">
             <div className="flex items-start gap-3">
@@ -274,21 +280,12 @@ export default function ContactFormSection() {
                 Based in India, supporting clients across education, IT & SaaS, and growing businesses worldwide.
               </p>
             </div>
-            
-            {/* Simple Map Representation */}
-            <div className="glass-card p-4 bg-gradient-to-br from-mint/20 to-sky/20 relative h-32 overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-4 h-4 bg-lavender rounded-full animate-pulse" />
-              </div>
-              <div className="absolute bottom-2 left-2 text-xs text-gray-600">
-                India
-              </div>
-            </div>
+          </div>
           </div>
         </div>
 
         {/* Social / Other */}
-        <div className="glass-card p-6">
+        <div className="glass-card-vibrant p-6 border border-accent/30">
           <h3 className="text-lg font-semibold mb-4">Connect with us</h3>
           <p className="text-sm text-gray-700 mb-3">
             You can also reach us on:
