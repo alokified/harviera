@@ -8,6 +8,7 @@ type ServiceCategoryCardProps = {
   description: string
   services: string[]
   accentColor: string
+  image?: string
 }
 
 export default function ServiceCategoryCard({ 
@@ -15,15 +16,27 @@ export default function ServiceCategoryCard({
   title, 
   description, 
   services, 
-  accentColor 
+  accentColor,
+  image
 }: ServiceCategoryCardProps) {
   return (
     <div className="glass-card-vibrant p-6 md:p-7 relative overflow-hidden border border-accent/30 transition-all duration-300 ease-soft hover:-translate-y-2 hover:shadow-glow-accent hover:border-accent/50">
       {/* Accent top bar */}
       <div className={`absolute top-0 left-0 right-0 h-1.5 ${accentColor} shadow-glow-accent`} />
       
+      {/* Image */}
+      {image && (
+        <div className="mb-4 -mx-6 -mt-6 md:-mx-7 md:-mt-7 h-40 overflow-hidden">
+          <img 
+            src={image} 
+            alt={title}
+            className="w-full h-full object-cover opacity-80"
+          />
+        </div>
+      )}
+      
       {/* Icon */}
-      <div className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl ${accentColor} mb-4`}>
+      <div className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl ${accentColor} mb-4 ${image ? '-mt-7' : ''}`}>
         <Icon className="h-7 w-7 text-gray-800" />
       </div>
 

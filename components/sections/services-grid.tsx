@@ -12,6 +12,7 @@ export default function ServicesGrid() {
       description: 'Build scalable, modern software from concept to deployment with cloud-native architecture.',
       services: ['Custom Software', 'Web Apps', 'Mobile Apps', 'Cloud Deployment', 'GEN AI Development', 'Automation & AI', 'Enterprise IT'],
       accentColor: 'bg-lavender',
+      image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80',
     },
     {
       icon: Brain,
@@ -19,6 +20,7 @@ export default function ServicesGrid() {
       description: 'Strategic guidance to optimize your technology stack, infrastructure, and digital transformation roadmap.',
       services: ['Tech Strategy', 'Cloud & Infra', 'Cybersecurity', 'Data Analytics', 'Digital Transformation', 'Process Optimization'],
       accentColor: 'bg-mint',
+      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80',
     },
     {
       icon: TrendingUp,
@@ -26,6 +28,7 @@ export default function ServicesGrid() {
       description: 'Drive growth with data-driven campaigns across SEO, social, PPC, content, and analytics.',
       services: ['SEO', 'Social Media', 'PPC', 'Content Marketing', 'Email & WhatsApp', 'Branding', 'Analytics'],
       accentColor: 'bg-peach',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
     },
     {
       icon: GraduationCap,
@@ -33,6 +36,7 @@ export default function ServicesGrid() {
       description: 'Navigate overseas admissions, university selection, and EdTech solutions with expert support.',
       services: ['Overseas Admissions', 'University Selection', 'Documentation Support', 'EdTech Advisory', 'Curriculum Advisory', 'Career Counselling'],
       accentColor: 'bg-baby-blue',
+      image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80',
     },
     {
       icon: Users,
@@ -40,6 +44,7 @@ export default function ServicesGrid() {
       description: 'Equip your team with technical, soft skills, and job-ready training programs tailored to industry needs.',
       services: ['Technical Training', 'Corporate Training', 'Campus Training', 'Job-Ready Programs', 'Soft Skills', 'LMS Solutions'],
       accentColor: 'bg-sky',
+      image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80',
     },
   ]
 

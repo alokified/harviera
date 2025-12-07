@@ -11,6 +11,7 @@ type CaseStudyCardProps = {
   challenge: string
   solution: string
   impact: string[]
+  image?: string
 }
 
 export default function CaseStudyCard({
@@ -22,9 +23,22 @@ export default function CaseStudyCard({
   challenge,
   solution,
   impact,
+  image,
 }: CaseStudyCardProps) {
   return (
-    <div className="glass-card p-6 flex flex-col h-full transition-all ease-soft hover:-translate-y-1 hover:shadow-xl">
+    <div className="glass-card-vibrant overflow-hidden flex flex-col h-full border border-accent/30 transition-all duration-300 ease-soft hover:-translate-y-2 hover:shadow-glow-accent hover:border-accent/50">
+      {/* Image */}
+      {image && (
+        <div className="h-48 overflow-hidden">
+          <img 
+            src={image} 
+            alt={title}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      )}
+      
+      <div className="p-6 flex flex-col flex-grow">
       {/* Top Meta */}
       <div className="flex items-center justify-between mb-4">
         <span className={`inline-flex px-3 py-1 text-xs font-medium ${industryColor} rounded-full`}>
@@ -83,6 +97,7 @@ export default function CaseStudyCard({
           <FileDown className="h-4 w-4" />
           <span className="hidden sm:inline">PDF</span>
         </a>
+      </div>
       </div>
     </div>
   )

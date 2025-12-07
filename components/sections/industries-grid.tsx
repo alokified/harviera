@@ -17,6 +17,7 @@ export default function IndustriesGrid() {
         'Improved student engagement with digital learning platforms',
         'Data-driven insights for academic performance tracking',
       ],
+      image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&q=80',
     },
     {
       id: '2',
@@ -29,6 +30,7 @@ export default function IndustriesGrid() {
         'Scalable cloud infrastructure with 99.9% uptime',
         'Optimized CI/CD pipelines reducing deployment time by 60%',
       ],
+      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80',
     },
     {
       id: '3',
@@ -41,6 +43,7 @@ export default function IndustriesGrid() {
         'Enhanced student-instructor collaboration tools',
         'Certificate and credential management automation',
       ],
+      image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80',
     },
     {
       id: '4',
@@ -53,6 +56,7 @@ export default function IndustriesGrid() {
         'Growth marketing strategies increasing user acquisition by 3x',
         'Technical architecture ready for scale and funding rounds',
       ],
+      image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&q=80',
     },
     {
       id: '5',
@@ -65,6 +69,7 @@ export default function IndustriesGrid() {
         'Enterprise security and compliance (ISO, GDPR, SOC2)',
         'Process automation saving 20+ hours/week per team',
       ],
+      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80',
     },
     {
       id: '6',
@@ -77,6 +82,7 @@ export default function IndustriesGrid() {
         'AI-driven diagnostics and predictive health analytics',
         'Streamlined appointment scheduling and EMR integration',
       ],
+      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80',
     },
   ]
 

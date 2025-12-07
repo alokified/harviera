@@ -17,6 +17,7 @@ type Course = {
   level: 'Beginner' | 'Intermediate' | 'Advanced'
   tags: string[]
   idealFor: string
+  image?: string
 }
 
 export default function CoursesGrid() {
@@ -33,6 +34,7 @@ export default function CoursesGrid() {
       level: 'Intermediate',
       tags: ['Job-ready', 'Capstone project', 'Mentor-led'],
       idealFor: 'Final year students, early professionals',
+      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80',
     },
     {
       id: '2',
@@ -46,6 +48,7 @@ export default function CoursesGrid() {
       level: 'Intermediate',
       tags: ['Hands-on labs', 'Certification prep'],
       idealFor: 'Developers, IT professionals',
+      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80',
     },
     {
       id: '3',
@@ -59,6 +62,7 @@ export default function CoursesGrid() {
       level: 'Beginner',
       tags: ['Job-ready', 'Real datasets', 'Career support'],
       idealFor: 'Career switchers, analysts',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80',
     },
     {
       id: '4',
@@ -72,6 +76,7 @@ export default function CoursesGrid() {
       level: 'Advanced',
       tags: ['Cutting-edge', 'Capstone project'],
       idealFor: 'Tech professionals, ML enthusiasts',
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80',
     },
     {
       id: '5',
@@ -85,6 +90,7 @@ export default function CoursesGrid() {
       level: 'Beginner',
       tags: ['Job-ready', 'Live campaigns', 'Certification'],
       idealFor: 'Marketers, entrepreneurs, students',
+      image: 'https://images.unsplash.com/photo-1432888622747-4eb9a8f2c6d5?w=600&q=80',
     },
     {
       id: '6',
@@ -98,6 +104,7 @@ export default function CoursesGrid() {
       level: 'Beginner',
       tags: ['Portfolio building', 'Brand projects'],
       idealFor: 'Content creators, brand managers',
+      image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&q=80',
     },
     {
       id: '7',
@@ -111,6 +118,7 @@ export default function CoursesGrid() {
       level: 'Beginner',
       tags: ['Mock interviews', 'Resume review', 'Personality dev'],
       idealFor: 'Students, early professionals',
+      image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80',
     },
     {
       id: '8',
@@ -124,6 +132,7 @@ export default function CoursesGrid() {
       level: 'Intermediate',
       tags: ['Hands-on labs', 'Industry tools'],
       idealFor: 'IT professionals, security enthusiasts',
+      image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80',
     },
     {
       id: '9',
@@ -137,6 +146,7 @@ export default function CoursesGrid() {
       level: 'Intermediate',
       tags: ['Case studies', 'PM frameworks'],
       idealFor: 'Aspiring PMs, team leads',
+      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80',
     },
   ]
 
@@ -163,22 +173,35 @@ export default function CoursesGrid() {
               }}
               className="flex"
             >
-              <div className="glass-card-vibrant p-6 flex flex-col h-full border border-accent/30 transition-all duration-300 ease-soft hover:-translate-y-2 hover:shadow-glow-accent hover:border-accent/50\">
-                {/* Category Badge */}
-                <div className="flex items-center justify-between mb-4">
-                  <span className={`inline-flex items-center gap-1 px-3 py-1.5 text-xs font-medium ${course.categoryColor} rounded-full shadow-soft-pastel`}>
-                    <Icon className="h-3.5 w-3.5" />
-                    {course.category}
-                  </span>
-                  <span className="text-xs text-gray-600">{course.level}</span>
-                </div>
+              <div className="glass-card-vibrant overflow-hidden flex flex-col h-full border border-accent/30 transition-all duration-300 ease-soft hover:-translate-y-2 hover:shadow-glow-accent hover:border-accent/50">
+                {/* Course Image */}
+                {course.image && (
+                  <div className="h-48 overflow-hidden">
+                    <img 
+                      src={course.image} 
+                      alt={course.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )}
+                
+                <div className="p-6 flex flex-col flex-grow">
+                  {/* Category Badge */}
+                  <div className="flex items-center justify-between mb-4">
+                    <span className={`inline-flex items-center gap-1 px-3 py-1.5 text-xs font-medium ${course.categoryColor} rounded-full shadow-soft-pastel`}>
+                      <Icon className="h-3.5 w-3.5" />
+                      {course.category}
+                    </span>
+                    <span className="text-xs text-gray-600">{course.level}</span>
+                  </div>
 
-                {/* Title */}
-                <h3 className="text-lg font-semibold mb-2">{course.title}</h3>
+                  {/* Title */}
+                  <h3 className="text-lg font-semibold mb-2">{course.title}</h3>
 
-                {/* Description */}
-                <p className="text-sm text-gray-700 mb-4 flex-grow">{course.shortDescription}</p>
+                  {/* Description */}
+                  <p className="text-sm text-gray-700 mb-4 flex-grow">{course.shortDescription}</p>
 
+                {/* Metadata */}
                 {/* Metadata */}
                 <div className="flex items-center gap-3 text-xs text-gray-600 mb-3 pb-3 border-b border-gray-200/50">
                   <span>⏱ {course.duration}</span>
@@ -203,6 +226,7 @@ export default function CoursesGrid() {
                   <a href="#" className="inline-block w-full">
                     <Button variant="primary" className="w-full">View details</Button>
                   </a>
+                </div>
                 </div>
               </div>
             </MotionDiv>

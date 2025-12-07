@@ -13,6 +13,7 @@ type CaseStudy = {
   challenge: string
   solution: string
   impact: string[]
+  image?: string
 }
 
 export default function CaseStudiesList() {
@@ -31,6 +32,7 @@ export default function CaseStudiesList() {
         '45% reduction in manual data entry errors',
         '78% improved applicant satisfaction scores',
       ],
+      image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&q=80',
     },
     {
       id: '2',
@@ -46,6 +48,7 @@ export default function CaseStudiesList() {
         '40% reduction in cloud infrastructure costs',
         '3x faster page load times under peak traffic',
       ],
+      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80',
     },
     {
       id: '3',
@@ -61,6 +64,7 @@ export default function CaseStudiesList() {
         '50% lower cost-per-acquisition on paid ads',
         '2.5x increase in course enrollments',
       ],
+      image: 'https://images.unsplash.com/photo-1432888622747-4eb9a8f2c6d5?w=600&q=80',
     },
     {
       id: '4',
@@ -76,6 +80,7 @@ export default function CaseStudiesList() {
         '85% instructor satisfaction with new tools',
         '100% automated certificate generation',
       ],
+      image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80',
     },
     {
       id: '5',
@@ -91,6 +96,7 @@ export default function CaseStudiesList() {
         '95% inventory accuracy improvement',
         '30% faster production cycle times',
       ],
+      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80',
     },
     {
       id: '6',
@@ -106,6 +112,7 @@ export default function CaseStudiesList() {
         '70% faster counselling session prep time',
         '42% higher student acceptance rates',
       ],
+      image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80',
     },
   ]
 

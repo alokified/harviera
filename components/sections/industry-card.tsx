@@ -9,11 +9,24 @@ type IndustryCardProps = {
   iconBg: string
   summary: string
   outcomes: string[]
+  image?: string
 }
 
-export default function IndustryCard({ icon: Icon, name, iconBg, summary, outcomes }: IndustryCardProps) {
+export default function IndustryCard({ icon: Icon, name, iconBg, summary, outcomes, image }: IndustryCardProps) {
   return (
-    <div className="glass-card p-6 flex flex-col h-full transition-all ease-soft hover:-translate-y-1 hover:shadow-xl">
+    <div className="glass-card-vibrant overflow-hidden flex flex-col h-full border border-accent/30 transition-all duration-300 ease-soft hover:-translate-y-2 hover:shadow-glow-accent hover:border-accent/50">
+      {/* Image */}
+      {image && (
+        <div className="h-48 overflow-hidden">
+          <img 
+            src={image} 
+            alt={name}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      )}
+      
+      <div className="p-6 flex flex-col flex-grow">
       {/* Icon + Name */}
       <div className="flex items-center gap-3 mb-4">
         <div className={`w-12 h-12 rounded-2xl ${iconBg} flex items-center justify-center`}>
@@ -46,6 +59,7 @@ export default function IndustryCard({ icon: Icon, name, iconBg, summary, outcom
         See related case studies
         <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" />
       </Link>
+      </div>
     </div>
   )
 }
