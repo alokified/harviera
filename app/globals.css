@@ -8,17 +8,71 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-bgBase antialiased;
-    /* Vibrant radial gradient background */
-    background: linear-gradient(135deg, 
-      rgba(196, 165, 255, 0.08) 0%, 
-      rgba(125, 211, 252, 0.08) 25%,
-      rgba(52, 211, 153, 0.06) 50%,
-      rgba(251, 146, 60, 0.05) 75%,
-      rgba(253, 164, 175, 0.06) 100%
-    );
-    background-attachment: fixed;
+    @apply antialiased;
+    background: white;
     color: #1F2937; /* Darker text for better contrast */
+  }
+
+  @keyframes wobble-path-1 {
+    0%, 100% {
+      transform: translate(0, 0) scale(1);
+    }
+    12.5% {
+      transform: translate(30px, -40px) scale(1.05);
+    }
+    25% {
+      transform: translate(60px, -20px) scale(0.95);
+    }
+    37.5% {
+      transform: translate(70px, 30px) scale(1.02);
+    }
+    50% {
+      transform: translate(40px, 60px) scale(1);
+    }
+    62.5% {
+      transform: translate(-20px, 50px) scale(0.98);
+    }
+    75% {
+      transform: translate(-50px, 20px) scale(1.03);
+    }
+    87.5% {
+      transform: translate(-40px, -30px) scale(0.97);
+    }
+  }
+
+  @keyframes wobble-path-2 {
+    0%, 100% {
+      transform: translate(0, 0) scale(1);
+    }
+    12.5% {
+      transform: translate(-40px, 30px) scale(0.96);
+    }
+    25% {
+      transform: translate(-60px, 60px) scale(1.04);
+    }
+    37.5% {
+      transform: translate(-30px, 80px) scale(0.98);
+    }
+    50% {
+      transform: translate(20px, 70px) scale(1.02);
+    }
+    62.5% {
+      transform: translate(50px, 40px) scale(1);
+    }
+    75% {
+      transform: translate(60px, -10px) scale(0.97);
+    }
+    87.5% {
+      transform: translate(30px, -40px) scale(1.03);
+    }
+  }
+
+  .animate-wobble-1 {
+    animation: wobble-path-1 30s ease-in-out infinite;
+  }
+
+  .animate-wobble-2 {
+    animation: wobble-path-2 35s ease-in-out infinite;
   }
 
   h1 {

@@ -8,18 +8,17 @@ export default function CoursesHero() {
   return (
     <div className="relative">
       {/* Vibrant Blobs Background */}
-      <div className="fixed inset-0 w-full h-full -z-10">
-        <div className="absolute inset-0 bg-gradient-linear-hero" />
+      <div className="fixed inset-0 w-full h-full -z-10 overflow-hidden">
         {/* Top-left center blob */}
         <div 
-          className="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full blur-3xl opacity-40"
+          className="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full blur-3xl opacity-40 animate-wobble-1"
           style={{
             background: 'radial-gradient(circle, rgba(125, 211, 252, 0.8) 0%, rgba(196, 165, 255, 0.5) 50%, transparent 100%)',
           }}
         />
         {/* Right-center blob */}
         <div 
-          className="absolute top-1/2 right-1/3 w-[450px] h-[450px] rounded-full blur-3xl opacity-35"
+          className="absolute top-1/2 right-1/3 w-[450px] h-[450px] rounded-full blur-3xl opacity-35 animate-wobble-2"
           style={{
             background: 'radial-gradient(circle, rgba(52, 211, 153, 0.7) 0%, rgba(56, 189, 248, 0.4) 50%, transparent 100%)',
           }}
