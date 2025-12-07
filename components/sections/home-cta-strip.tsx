@@ -5,15 +5,23 @@ import Button from '@/components/ui/button'
 export default function HomeCtaStrip() {
   return (
     <div className="relative">
-      {/* Background Image with Overlay */}
-      <div className="fixed inset-0 w-full h-full -z-10">
+      {/* Vibrant Blurry Blobs */}
+      <div className="fixed inset-0 w-full h-full -z-10 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-linear-hero" />
+        
+        {/* Top-left center blob */}
         <div 
-          className="absolute inset-0 opacity-10"
+          className="absolute top-0 left-1/4 w-[500px] h-[500px] blur-3xl opacity-40 rounded-full"
           style={{
-            backgroundImage: 'url("https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1920&q=80")',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            background: 'radial-gradient(circle, rgba(125,211,252,0.8) 0%, rgba(196,165,255,0.5) 100%)',
+          }}
+        />
+        
+        {/* Right-center blob */}
+        <div 
+          className="absolute top-1/2 right-1/3 w-[450px] h-[450px] blur-3xl opacity-35 rounded-full"
+          style={{
+            background: 'radial-gradient(circle, rgba(52,211,153,0.7) 0%, rgba(56,189,248,0.4) 100%)',
           }}
         />
       </div>

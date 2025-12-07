@@ -7,15 +7,21 @@ import { TrendingUp, Clock, Users } from 'lucide-react'
 export default function CaseStudiesHero() {
   return (
     <div className="relative">
-      {/* Background Image with Overlay */}
+      {/* Vibrant Blobs Background */}
       <div className="fixed inset-0 w-full h-full -z-10">
         <div className="absolute inset-0 bg-gradient-linear-hero" />
+        {/* Top-left center blob */}
         <div 
-          className="absolute inset-0 opacity-10"
+          className="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full blur-3xl opacity-40"
           style={{
-            backgroundImage: 'url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&q=80")',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            background: 'radial-gradient(circle, rgba(52, 211, 153, 0.8) 0%, rgba(56, 189, 248, 0.5) 50%, transparent 100%)',
+          }}
+        />
+        {/* Right-center blob */}
+        <div 
+          className="absolute top-1/2 right-1/3 w-[450px] h-[450px] rounded-full blur-3xl opacity-35"
+          style={{
+            background: 'radial-gradient(circle, rgba(196, 165, 255, 0.7) 0%, rgba(52, 211, 153, 0.4) 50%, transparent 100%)',
           }}
         />
       </div>
