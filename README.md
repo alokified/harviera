@@ -2,32 +2,70 @@
 
 Pastel glassmorphism marketing site using Next.js App Router, TypeScript, Tailwind, shadcn/ui, Framer Motion, and Lucide.
 
-## Run locally
+## Tech Stack
+- **Next.js 14+** (App Router)
+- **TypeScript** everywhere
+- **Tailwind CSS**
+- **shadcn/ui primitives**: Button, Input, Tabs, Dialog, NavigationMenu, Sheet
+- **Framer Motion**: Animations & scroll reveals
+- **Lucide Icons**: Iconography
+
+## Design System
+- **Style**: Pastel + glassmorphism, light & airy.
+- **Components**: Glass cards (`rgba(255,255,255,0.35)`, backdrop-blur-xl), rounded corners, subtle gradients.
+- **Color Tokens** (defined in `tailwind.config.ts`):
+  - Lavender: `#E7D7FF`
+  - Baby Blue: `#D9EFFF`
+  - Mint: `#DFFFEA`
+  - Blush Pink: `#FFE7EF`
+  - Peach: `#FFD9C2`
+  - Sky: `#CFF3FF`
+  - Soft Gray: `#F2F5F8`
+
+## Features & Routes
+Authentication or dynamic API routes are not currently implemented (Static Site).
+
+**Available Routes:**
+- `/` - Home
+- `/about` - About Us
+- `/services` - Services Listing
+- `/courses` - Courses Listing
+- `/industries` - Industries Listing
+- `/case-studies` - Case Studies Listing
+- `/resources` - Resources Listing
+- `/contact` - Contact Page
+
+## Project Structure
+```
+app/          # Pages and Layouts (App Router)
+components/   # React Components
+  layout/     # Header, Footer, Background
+  sections/   # Page-specific sections
+  ui/         # Reusable UI primitives (shadcn)
+lib/          # Utilities and Constants
+public/       # Static Assets
+```
+
+## Getting Started
+
+Run the development server:
 
 ```pwsh
 npm install
 npm run dev
 ```
 
-Open `http://localhost:3000`.
+Open `http://localhost:3000` with your browser to see the result.
 
-## Tech stack
-- Next.js 14+ (App Router)
-- TypeScript
-- Tailwind CSS
-- shadcn/ui primitives
-- Framer Motion
-- Lucide Icons
+## Deployment
 
-## Design system
-- Pastel color tokens defined in `tailwind.config.ts`
-- Glass cards via `.glass-card` in `app/globals.css`
-- Layout helpers: `.page-container`, `.section`, `.section-inner`
+Since there are no server-side requirements (no dynamic API routes), this site is fully compatible with **Static Export**.
 
-## Next steps
-- SEO: per-route `metadata`, `app/sitemap.ts`, `app/robots.txt`, social images
-- Content: replace placeholders with final copy
-- Analytics: integrate Plausible or GA4
-- Accessibility: focus states, aria labels, contrast pass
-- Performance: `next/image`, font loading, code-splitting
-# harviera
+**Configuration:**
+- `next.config.ts` is configured with `output: 'export'` and `images: { unoptimized: true }`.
+
+**Compatible Hosts:**
+- GitHub Pages
+- Vercel
+- Netlify
+- Any static hosting provider

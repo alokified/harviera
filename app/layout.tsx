@@ -1,6 +1,5 @@
 import './globals.css'
 import type { ReactNode } from 'react'
-// Placeholders; will be implemented in later phases
 import Header from '@/components/layout/header'
 import Footer from '@/components/layout/footer'
 import AnimatedBackground from '@/components/layout/animated-background'
@@ -42,7 +41,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body className="min-h-dvh">
         <AnimatedBackground />
-        {/* Analytics (Plausible) */}
         <Script
           src="https://plausible.io/js/script.js"
           data-domain="harviera.example"
