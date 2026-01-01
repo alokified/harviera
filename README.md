@@ -56,15 +56,3 @@ npm run dev
 ```
 
 Open `http://localhost:3000` with your browser to see the result.
-
-## Deployment
-
-Since there are no server-side requirements (no dynamic API routes), this site is fully compatible with **Static Export**.
-
-**Configuration:**
-- `next.config.ts` is configured with `output: 'export'` and `images: { unoptimized: true }`.
-
-**Compatible Hosts:**
-- GitHub Pages
-- Netlify
-- Any static hosting provider
